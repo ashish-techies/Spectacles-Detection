@@ -1,5 +1,6 @@
 # Spectacles-Detection
 A lightweight, high-accuracy deep learning model designed to detect whether a person is wearing glasses or not, even when the face is tilted up to 75° and under some edge cases such as low light environments, blurred images etc.
+
 🎯 Objective
 To build a compact yet accurate glasses detection model using deep learning that:
 
@@ -7,6 +8,7 @@ Achieves ≥ 85% accuracy
 Works on angled faces (up to 75°)
 Is optimized for deployment with TensorFlow Lite
 Has a model size of ≤ 30MB
+
 🚀 Approach
 1. Dataset
 CelebA dataset with 200K+ celebrity images
@@ -33,6 +35,7 @@ Early stopping and LR scheduling used for stability
 Evaluated on held-out test set and individual images
 Consistent performance across batch and real-world inferences
 Screenshot 2025-04-29 at 3 13 12 PM Screenshot 2025-04-29 at 3 40 13 PM
+
 📂 Project Structure
 preprocessing.ipynb : Data preprocessing and metadata generation
 train.py : Model training with augmentation and class weights
@@ -44,6 +47,7 @@ requirements.txt : All the necessary dependencies
 test_model.py : This script is for evaluating the model on a single image before converting it into tflite format
 test_tflite_single_image.py : This script is for testing the model on a single image after converting it into tflite format
 test_tflite.py : This script is for testing the model on the test data after converting to tflite format
+
 📌 If you want to run the project from scratch -
 1. Clone this repo
 git clone https://github.com/Keerthanareddy17/Spectacles-Detection.git
