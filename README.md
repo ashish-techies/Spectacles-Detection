@@ -50,7 +50,7 @@ test_tflite.py : This script is for testing the model on the test data after con
 
 📌 If you want to run the project from scratch -
 1. Clone this repo
-git clone https://github.com/Keerthanareddy17/Spectacles-Detection.git
+git clone my repo(___________ _________)
 cd Spectacles-Detection
 2. Create a Virtual Environment
 Run the following command to create a new virtual environment in the project directory:
