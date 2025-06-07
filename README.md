@@ -1,7 +1,7 @@
 # Spectacles-Detection
 A lightweight, high-accuracy deep learning model designed to detect whether a person is wearing glasses or not, even when the face is tilted up to 75° and under some edge cases such as low light environments, blurred images etc.
 
-🎯 Objective
+#🎯 Objective
 To build a compact yet accurate glasses detection model using deep learning that:
 
 Achieves ≥ 85% accuracy
@@ -9,29 +9,31 @@ Works on angled faces (up to 75°)
 Is optimized for deployment with TensorFlow Lite
 Has a model size of ≤ 30MB
 
-🚀 Approach
-1. Dataset
+#🚀 Approach
+
+# 1. Dataset
 CelebA dataset with 200K+ celebrity images
 Binary labels: Eyeglasses → {1: Glasses, 0: No Glasses}
 Used official train/val/test splits
-2. Preprocessing
+
+# 2. Preprocessing
 Label conversion and metadata creation
 Images resized to 128x128
 Normalized pixel values to [0,1]
-3. Class Imbalance
+# 3. Class Imbalance
 Computed and used class_weight during training to handle imbalance between "glasses" and "no glasses" classes
-4. Model Architecture
+# 4. Model Architecture
 Base: MobileNetV2 (ImageNet pretrained)
 Custom head: GAP → Dense(128, ReLU) → BatchNorm → Dropout(0.4) → Dense(1, Sigmoid)
-5. Augmentation
+# 5. Augmentation
 Custom augmentations for angle robustness:
 Rotation (±45°), brightness/contrast shifts
 Horizontal flips, random crops, Gaussian noise
-6. Training Strategy
+# 6. Training Strategy
 Phase 1: Train custom head with base frozen
 Phase 2: Fine-tune base model with lower learning rate
 Early stopping and LR scheduling used for stability
-7. Evaluation
+# 7. Evaluation
 Evaluated on held-out test set and individual images
 Consistent performance across batch and real-world inferences
 Screenshot 2025-04-29 at 3 13 12 PM Screenshot 2025-04-29 at 3 40 13 PM
